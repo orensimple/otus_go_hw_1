@@ -9,7 +9,7 @@ import (
 func main() {
 	currentTime, err := ntp.Time("0.beevik-ntp.pool.ntp.org")
 	if err != nil {
-		fmt.Println("problem with remote ntp server, use server time")
+		fmt.Printf("Remote ntp server error: %v", err)
 	}
 	fmt.Println(currentTime)
 }
